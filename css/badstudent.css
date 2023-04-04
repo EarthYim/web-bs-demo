@@ -33,7 +33,7 @@ body {
 
 .textp1 {
     font-family: FCMinimalRegular;
-    font-size: 18px;
+    font-size: 15px;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -55,7 +55,7 @@ body {
 .header1 {
     font-family: KulachatSlabBold;
     color: rgb(237,102,129);
-    font-size: 34px;
+    font-size: 26px;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -218,15 +218,15 @@ a:active {
   box-sizing: border-box;
   color: black;
   cursor: pointer;
-  display: inline-flex;
+  display: inline-flex; 
   font-family: FCMinimalMedium;
-  font-size: 16px;
+  font-size: 11px;
   font-weight: 500;
   justify-content: center;
   line-height: 20px;
   max-width: 480px;
-  min-height: 40px;
-  min-width: 160px;
+  min-height: 35px;
+  min-width: 80px;
   overflow: hidden;
   padding: 0px;
   padding-left: 30px;
@@ -263,7 +263,7 @@ a:active {
 .header2 {
     font-family: KulachatSlabBold;
     color: white;
-    font-size: 34px;
+    font-size: 28px;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -361,14 +361,14 @@ a:active {
 
 .drop-text {
     font-family: FCMinimalRegular;
-    font-size: 18px;
+    font-size: 15px;
     color: white;
 }
 
 .btn-custom-dropdown {
     color: white;
     font-family: FCMinimalRegular;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .btn-custom-dropdown.collapsed i{
