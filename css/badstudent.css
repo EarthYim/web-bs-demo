@@ -33,7 +33,7 @@ body {
 
 .textp1 {
     font-family: FCMinimalRegular;
-    font-size: 15px;
+    font-size: 18px;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -55,7 +55,7 @@ body {
 .header1 {
     font-family: KulachatSlabBold;
     color: rgb(237,102,129);
-    font-size: 26px;
+    font-size: 28px;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -96,6 +96,7 @@ body {
 }
 
 .BadStudentV4Footer {
+    
 }
 
 .FooterSocial {
@@ -220,7 +221,7 @@ a:active {
   cursor: pointer;
   display: inline-flex; 
   font-family: FCMinimalMedium;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 500;
   justify-content: center;
   line-height: 20px;
@@ -361,14 +362,14 @@ a:active {
 
 .drop-text {
     font-family: FCMinimalRegular;
-    font-size: 15px;
+    font-size: 16px;
     color: white;
 }
 
 .btn-custom-dropdown {
     color: white;
     font-family: FCMinimalRegular;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .btn-custom-dropdown.collapsed i{
