@@ -55,7 +55,7 @@ body {
 .header1 {
     font-family: KulachatSlabBold;
     color: rgb(237,102,129);
-    font-size: 28px;
+    font-size: 34px;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -200,7 +200,7 @@ a:active {
   cursor: pointer;
   display: inline-flex; 
   font-family: FCMinimalMedium;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   justify-content: center;
   line-height: 30px;
@@ -209,8 +209,8 @@ a:active {
   min-width: 80px;
   overflow: hidden;
   padding: 0px;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: center;
   touch-action: manipulation;
   transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
@@ -339,13 +339,13 @@ a:active {
 .btn-custom-dropdown {
     color: white;
     font-family: FCMinimalRegular;
-    font-size: 15px;
+    font-size: 18px;
     transition: 0.3s;
 }
 
 .drop-text {
     font-family: FCMinimalRegular;
-    font-size: 15px;
+    font-size: 18px;
     color: white;
 }
 
@@ -404,7 +404,10 @@ a:active {
 @media only screen and (min-width: 1024px) {
     .showdesktop {
         display: flex;
-      }
+    }
+
+    
+
   }
 
   .grecaptcha-badge {
@@ -412,17 +415,19 @@ a:active {
 }
 
 @media only screen and (max-width: 600px) {
+
     .card-custom {
         height: 210px;
+        max-width: 380px;
     }
     .card-custom::before {
-        border-radius: 25px;
+        border-radius: 20px;
         margin-top: 29px;
     }
     
     .card-custom-sub::before {
-        border-bottom-left-radius: 25px;
-        border-bottom-right-radius: 25px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
         margin-top: 144px;
     }
 
@@ -440,5 +445,26 @@ a:active {
     .card-custom-text {
         font-size: 12px;
         margin-bottom: 10px;
+    }
+
+    .btn-custom-dropdown {
+        font-size: 15px;
+    }
+    
+    .drop-text {
+        font-size: 15px;
+    }
+
+    .header1 {
+        font-size: 28px;
+    }
+
+    .button-18 {
+        font-size: 12px;
+    }
+
+    .sh-text {
+        margin-left: 4px;
+        font-size: 12px;
     }
 }
