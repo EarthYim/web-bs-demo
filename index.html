@@ -59,7 +59,7 @@
 							<img class="animate__animated animate__bounce" height="150" src="./images/campaignLogo.png" style="max-width: 100%;">
 							<div class="animate__animated animate__bounce mt-2" style="font-size:22px; font-weight: 300; font-family: FCMinimalRegular; ">จำนวนคนลงชื่อ</div><br>
 							<div class="countNumberHeader animate__animated animate__bounce" data-text="total" style="font-family: KulachatSlabBold; font-size: 72px;">0</div>
-							<button class="button-18" data-bs-target="#registerModal" data-bs-toggle="modal" style="font-weight: 400; font-size:22px; padding-left: 40px; padding-right:40px; border-radius: 30px;" type="button">ลงชื่อ</button>
+							<button class="button-18 signup" data-bs-target="#registerModal" data-bs-toggle="modal" type="button">ลงชื่อ</button>
 						</div>
 						<!--div class="col-md-6 order-md-1 order-2 text-center animate__animated animate__bounce">
 						</div-->
@@ -163,65 +163,72 @@
 		-->
 
 		<section id="infoCollaspe">
-			<div class="infoCard">
+			<div class="infoCard">	
 				<div class="container">
 					<div class="showmobile">
 						<div align="center" class="row justify-content-md-center"></div>
-						<h2 class="header2 mt-4">สรุปเนื้อหาในร่างรื้อระบอบอำนาจนิยม <br>
-							<Button class="btn button-18 mt-4 mb-4" data-bs-target="#carouselsection" data-bs-slide-to="0" class="active"> หมวดที่ 1</Button>
-							<Button class="btn button-18 mt-4 mb-4" data-bs-target="#carouselsection" data-bs-slide-to="1">หมวดที่ 2</Button>
-							<Button class="btn button-18 mt-4 mb-4" data-bs-target="#carouselsection" data-bs-slide-to="2">หมวดที่ 3</Button>
-						</h2>
-						<div>
-							
+						<h2 class="header1 invert mt-4">สรุปเนื้อหาในร่างรื้อระบอบอำนาจนิยม</h2>
+						<div class="cs-nav">
+							<Button onclick="toggle_csnav_text('cs-text-nav1')" class="btn button-18 mb-3" style="font-family: FCMinimalBold;" data-bs-target="#carouselsection" data-bs-slide-to="0" class="active"> 
+								หมวดที่ 1
+								<div id="cs-text-nav1" class="sh-text">สิทธิขั้นพื้นฐาน</div>
+							</Button>
+							<Button onclick="toggle_csnav_text('cs-text-nav2')" class="btn button-18 mb-3" style="font-family: FCMinimalBold;" data-bs-target="#carouselsection" data-bs-slide-to="1" class="active"> 
+								หมวดที่ 2
+								<div id="cs-text-nav2" class="sh-text" style="display: none;">เค้กหิวข้าว</div>
+							</Button>
+							<Button onclick="toggle_csnav_text('cs-text-nav3')" class="btn button-18 mb-3" style="font-family: FCMinimalBold;" data-bs-target="#carouselsection" data-bs-slide-to="2" class="active"> 
+								หมวดที่ 3
+								<div id="cs-text-nav3" class="sh-text" style="display: none;">ฟิโอน่าเลิกโง่</div>
+							</Button>
 						</div>
 						<div id="carouselsection" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner">
 								<div class="carousel-item active">
-									<div align="center" class="row justify-content-md-center">
+									<div align="center" class="row justify-content-md-center" style="padding-left: 30px; padding-right: 30px;">
 										<div class="col-lg-3 col-6 d-flex flex-column align-items-center">
-											<div class="card mb-4" style="width: 10rem;max-width: 90%; border-radius: 30px; background-color: white; height: 10rem;"></div>
-											<Button class="btn btn-custom-dropdown mb-5" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+											<div class="card mb-2" style="width: 10rem;max-width: 90%; border-radius: 30px; background-color: white; height: 10rem;"></div>
+											<Button class="btn btn-custom-dropdown mb-3" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
 												<i class="bx bx-chevron-down"></i>
 												หลักประกันสิทธิ
 											</Button>
 										</div>
 										<div class="col-lg-3 col-6 d-flex flex-column align-items-center">
-											<div class="card mb-4" style="width: 10rem;max-width: 90%; border-radius: 30px; background-color: white; height: 10rem;"></div>
-											<Button class="btn btn btn-custom-dropdown mb-5" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
+											<div class="card mb-2" style="width: 10rem;max-width: 90%; border-radius: 30px; background-color: white; height: 10rem;"></div>
+											<Button  class="btn btn-custom-dropdown mb-3" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
 												<i class="bx bx-chevron-down"></i>
 												คุ้มครองจิตใจ</Button>
 										</div>
-										<div class="collapse multi-collapse mb-4 order-lg-2" id="Collapse1" data-bs-parent="#infoCollaspe">
+										<div class="collapse multi-collapse mb-3 order-lg-2" id="Collapse1" data-bs-parent="#infoCollaspe">
 											<div class="drop-text">
 													มาร์จินใช้งานแรงดูด โอเวอร์ปัจฉิมนิเทศ แจ็กพ็อตอีสต์บาลานซ์ปฏิสัมพันธ์ ว้อยโทรโข่งรุมบ้าศิลปวัฒนธรรม ไฮบริดเมเปิลอุปสงค์แบดแพนดา บ๋อย ปาสกาลฮาราคีรีน็อคศึกษาศา
 											</div>
 										</div>
-										<div class="collapse multi-collapse mb-4 order-lg-2" id="Collapse2" data-bs-parent="#infoCollaspe">
+										<div class="collapse multi-collapse mb-3 order-lg-2" id="Collapse2" data-bs-parent="#infoCollaspe">
 											<div class="drop-text">
 													มาร์จินใช้งานแรงดูด โอเวอร์ปัจฉิมนิเทศ แจ็กพ็อตอีสต์บาลานซ์ปฏิสัมพันธ์ ว้อยโทรโข่งรุมบ้าศิลปวัฒนธรรม ไฮบริดเมเปิลอุปสงค์แบดแพนดา บ๋อย ปาสกาลฮาราคีรีน็อคศึกษาศา
 											</div>
 										</div>
 										<div class="col-lg-3 col-6 order-lg-1">
-											<div class="card mb-4" style="width: 10rem;max-width: 90%; border-radius: 30px; background-color: white; height: 10rem;"></div>
-											<Button class="btn btn-custom-dropdown mb-5" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse3" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+											<div class="card mb-2" style="width: 10rem;max-width: 90%; border-radius: 30px; background-color: white; height: 10rem;"></div>
+											<Button class="btn btn-custom-dropdown mb-2" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse3" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
 												<i class="bx bx-chevron-down"></i>
 												หลักประกันสิทธิ
 											</Button>
 										</div>
 										<div class="col-lg-3 col-6 order-lg-1">
-											<div class="card mb-4" style="width: 10rem;max-width: 90%; border-radius: 30px; background-color: white; height: 10rem;"></div>
-											<Button class="btn btn-custom-dropdown mb-5" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse4" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+											<div class="card mb-2" style="width: 10rem;max-width: 90%; border-radius: 30px; background-color: white; height: 10rem;"></div>
+											<Button class="btn btn-custom-dropdown mb-2" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse4" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
 												<i class="bx bx-chevron-down"></i>
 												หลักประกันสิทธิ
 											</Button>
 										</div>
-										<div class="collapse multi-collapse mb-4 order-lg-2" id="Collapse3" data-bs-parent="#infoCollaspe">
+										<div class="collapse multi-collapse mb-3 order-lg-2" id="Collapse3" data-bs-parent="#infoCollaspe">
 											<div class="drop-text">
 													มาร์จินใช้งานแรงดูด โอเวอร์ปัจฉิมนิเทศ แจ็กพ็อตอีสต์บาลานซ์ปฏิสัมพันธ์ ว้อยโทรโข่งรุมบ้าศิลปวัฒนธรรม ไฮบริดเมเปิลอุปสงค์แบดแพนดา บ๋อย ปาสกาลฮาราคีรีน็อคศึกษาศา
 											</div>
 										</div>
-										<div class="collapse multi-collapse mb-4 order-lg-2" id="Collapse4" data-bs-parent="#infoCollaspe">
+										<div class="collapse multi-collapse mb-3 order-lg-2" id="Collapse4" data-bs-parent="#infoCollaspe">
 											<div class="drop-text">
 													มาร์จินใช้งานแรงดูด โอเวอร์ปัจฉิมนิเทศ แจ็กพ็อตอีสต์บาลานซ์ปฏิสัมพันธ์ ว้อยโทรโข่งรุมบ้าศิลปวัฒนธรรม ไฮบริดเมเปิลอุปสงค์แบดแพนดา บ๋อย ปาสกาลฮาราคีรีน็อคศึกษาศา
 											</div>
@@ -230,66 +237,109 @@
 								</div>
 
 								<div class="carousel-item">
-									<div align="center" class="row justify-content-md-center">
+									<div align="center" class="row justify-content-md-center" style="padding-left: 30px; padding-right: 30px;">
 										<div class="col-lg-3 col-6 d-flex flex-column align-items-center">
-											<div class="card mb-4" style="width: 15rem;max-width: 90%; border-radius: 30px; background-color: white; height: 15rem;"></div>
-											<Button class="btn btn-warning dropdown-toggle mb-5" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">หมวดที่ 2</Button>
+											<div class="card mb-2" style="width: 10rem;max-width: 90%; border-radius: 30px; background-color: white; height: 10rem;"></div>
+											<Button class="btn btn-custom-dropdown mb-3" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+												<i class="bx bx-chevron-down"></i>
+												หลักประกันสิทธิ
+											</Button>
 										</div>
 										<div class="col-lg-3 col-6 d-flex flex-column align-items-center">
-											<div class="card mb-4" style="width: 15rem;max-width: 90%; border-radius: 30px; background-color: white; height: 15rem;"></div>
-											<Button class="btn btn-warning dropdown-toggle mb-5" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">คุ้มyrhportkhpงจิตใจ</Button>
+											<div class="card mb-2" style="width: 10rem;max-width: 90%; border-radius: 30px; background-color: white; height: 10rem;"></div>
+											<Button  class="btn btn-custom-dropdown mb-3" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
+												<i class="bx bx-chevron-down"></i>
+												คุ้มครองจิตใจ</Button>
 										</div>
-										<div class="collapse multi-collapse show mb-4 order-lg-2" id="Collapse1" data-bs-parent="#infoCollaspe">
-											<div class="card card-body">
-												หลักประกันสิทธิ<br>
+										<div class="collapse multi-collapse mb-3 order-lg-2" id="Collapse1" data-bs-parent="#infoCollaspe">
+											<div class="drop-text">
 													มาร์จินใช้งานแรงดูด โอเวอร์ปัจฉิมนิเทศ แจ็กพ็อตอีสต์บาลานซ์ปฏิสัมพันธ์ ว้อยโทรโข่งรุมบ้าศิลปวัฒนธรรม ไฮบริดเมเปิลอุปสงค์แบดแพนดา บ๋อย ปาสกาลฮาราคีรีน็อคศึกษาศา
 											</div>
 										</div>
-										<div class="collapse multi-collapse mb-4 order-lg-2" id="Collapse2" data-bs-parent="#infoCollaspe">
-											<div class="card card-body">
-												คุ้มครองจิตใจ<br>
+										<div class="collapse multi-collapse mb-3 order-lg-2" id="Collapse2" data-bs-parent="#infoCollaspe">
+											<div class="drop-text">
 													มาร์จินใช้งานแรงดูด โอเวอร์ปัจฉิมนิเทศ แจ็กพ็อตอีสต์บาลานซ์ปฏิสัมพันธ์ ว้อยโทรโข่งรุมบ้าศิลปวัฒนธรรม ไฮบริดเมเปิลอุปสงค์แบดแพนดา บ๋อย ปาสกาลฮาราคีรีน็อคศึกษาศา
 											</div>
 										</div>
-										<div class="col-lg-3 col-6">
-											<div class="card mb-4" style="width: 15rem;max-width: 90%; border-radius: 30px; background-color: white; height: 15rem;"></div>
+										<div class="col-lg-3 col-6 order-lg-1">
+											<div class="card mb-2" style="width: 10rem;max-width: 90%; border-radius: 30px; background-color: white; height: 10rem;"></div>
+											<Button class="btn btn-custom-dropdown mb-2" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse3" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+												<i class="bx bx-chevron-down"></i>
+												หลักประกันสิทธิ
+											</Button>
 										</div>
-										<div class="col-lg-3 col-6">
-											<div class="card mb-4" style="width: 15rem;max-width: 90%; border-radius: 30px; background-color: white; height: 15rem;"></div>
+										<div class="col-lg-3 col-6 order-lg-1">
+											<div class="card mb-2" style="width: 10rem;max-width: 90%; border-radius: 30px; background-color: white; height: 10rem;"></div>
+											<Button class="btn btn-custom-dropdown mb-2" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse4" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+												<i class="bx bx-chevron-down"></i>
+												หลักประกันสิทธิ
+											</Button>
+										</div>
+										<div class="collapse multi-collapse mb-3 order-lg-2" id="Collapse3" data-bs-parent="#infoCollaspe">
+											<div class="drop-text">
+													มาร์จินใช้งานแรงดูด โอเวอร์ปัจฉิมนิเทศ แจ็กพ็อตอีสต์บาลานซ์ปฏิสัมพันธ์ ว้อยโทรโข่งรุมบ้าศิลปวัฒนธรรม ไฮบริดเมเปิลอุปสงค์แบดแพนดา บ๋อย ปาสกาลฮาราคีรีน็อคศึกษาศา
+											</div>
+										</div>
+										<div class="collapse multi-collapse mb-3 order-lg-2" id="Collapse4" data-bs-parent="#infoCollaspe">
+											<div class="drop-text">
+													มาร์จินใช้งานแรงดูด โอเวอร์ปัจฉิมนิเทศ แจ็กพ็อตอีสต์บาลานซ์ปฏิสัมพันธ์ ว้อยโทรโข่งรุมบ้าศิลปวัฒนธรรม ไฮบริดเมเปิลอุปสงค์แบดแพนดา บ๋อย ปาสกาลฮาราคีรีน็อคศึกษาศา
+											</div>
 										</div>
 									</div>
 								</div>
 
 								<div class="carousel-item">
-									<div align="center" class="row justify-content-md-center">
-										<div class="col-lg-3 col-md-6 col-sm-6 d-flex flex-column align-items-center">
-											<div class="card mb-4" style="width: 15rem;max-width: 90%; border-radius: 30px; background-color: white; height: 15rem;"></div>
-											<Button class="btn btn-custom-dropdown" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">หมวดที่ 3</Button>
+									<div align="center" class="row justify-content-md-center" style="padding-left: 30px; padding-right: 30px;">
+										<div class="col-lg-3 col-6 d-flex flex-column align-items-center">
+											<div class="card mb-2" style="width: 10rem;max-width: 90%; border-radius: 30px; background-color: white; height: 10rem;"></div>
+											<Button class="btn btn-custom-dropdown mb-3" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+												<i class="bx bx-chevron-down"></i>
+												หลักประกันสิทธิ
+											</Button>
 										</div>
-										<div class="col-lg-3 col-md-6 col-sm-6 d-flex flex-column align-items-center">
-											<div class="card mb-4" style="width: 15rem;max-width: 90%; border-radius: 30px; background-color: white; height: 15rem;"></div>
-											<Button class="btn btn-warning dropdown-toggle mb-5" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">คุ้มyrhportkhpงจิตใจ</Button>
+										<div class="col-lg-3 col-6 d-flex flex-column align-items-center">
+											<div class="card mb-2" style="width: 10rem;max-width: 90%; border-radius: 30px; background-color: white; height: 10rem;"></div>
+											<Button  class="btn btn-custom-dropdown mb-3" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
+												<i class="bx bx-chevron-down"></i>
+												คุ้มครองจิตใจ</Button>
 										</div>
-										<div class="collapse multi-collapse show mb-4 order-lg-2" id="Collapse1" data-bs-parent="#infoCollaspe">
-											<div class="card card-body">
-												หลักประกันสิทธิ<br>
+										<div class="collapse multi-collapse mb-3 order-lg-2" id="Collapse1" data-bs-parent="#infoCollaspe">
+											<div class="drop-text">
 													มาร์จินใช้งานแรงดูด โอเวอร์ปัจฉิมนิเทศ แจ็กพ็อตอีสต์บาลานซ์ปฏิสัมพันธ์ ว้อยโทรโข่งรุมบ้าศิลปวัฒนธรรม ไฮบริดเมเปิลอุปสงค์แบดแพนดา บ๋อย ปาสกาลฮาราคีรีน็อคศึกษาศา
 											</div>
 										</div>
-										<div class="collapse multi-collapse mb-4 order-lg-2" id="Collapse2" data-bs-parent="#infoCollaspe">
-											<div class="card card-body">
-												คุ้มครองจิตใจ<br>
+										<div class="collapse multi-collapse mb-3 order-lg-2" id="Collapse2" data-bs-parent="#infoCollaspe">
+											<div class="drop-text">
 													มาร์จินใช้งานแรงดูด โอเวอร์ปัจฉิมนิเทศ แจ็กพ็อตอีสต์บาลานซ์ปฏิสัมพันธ์ ว้อยโทรโข่งรุมบ้าศิลปวัฒนธรรม ไฮบริดเมเปิลอุปสงค์แบดแพนดา บ๋อย ปาสกาลฮาราคีรีน็อคศึกษาศา
 											</div>
 										</div>
-										<div class="col-lg-3 col-md-6 col-sm-6 order-lg-1">
-											<div class="card mb-4" style="width: 15rem;max-width: 90%; border-radius: 30px; background-color: white; height: 15rem;"></div>
+										<div class="col-lg-3 col-6 order-lg-1">
+											<div class="card mb-2" style="width: 10rem;max-width: 90%; border-radius: 30px; background-color: white; height: 10rem;"></div>
+											<Button class="btn btn-custom-dropdown mb-2" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse3" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+												<i class="bx bx-chevron-down"></i>
+												หลักประกันสิทธิ
+											</Button>
 										</div>
-										<div class="col-lg-3 col-md-6 col-sm-6 order-lg-1">
-											<div class="card mb-4" style="width: 15rem;max-width: 90%; border-radius: 30px; background-color: white; height: 15rem;"></div>
+										<div class="col-lg-3 col-6 order-lg-1">
+											<div class="card mb-2" style="width: 10rem;max-width: 90%; border-radius: 30px; background-color: white; height: 10rem;"></div>
+											<Button class="btn btn-custom-dropdown mb-2" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse4" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+												<i class="bx bx-chevron-down"></i>
+												หลักประกันสิทธิ
+											</Button>
+										</div>
+										<div class="collapse multi-collapse mb-3 order-lg-2" id="Collapse3" data-bs-parent="#infoCollaspe">
+											<div class="drop-text">
+													มาร์จินใช้งานแรงดูด โอเวอร์ปัจฉิมนิเทศ แจ็กพ็อตอีสต์บาลานซ์ปฏิสัมพันธ์ ว้อยโทรโข่งรุมบ้าศิลปวัฒนธรรม ไฮบริดเมเปิลอุปสงค์แบดแพนดา บ๋อย ปาสกาลฮาราคีรีน็อคศึกษาศา
+											</div>
+										</div>
+										<div class="collapse multi-collapse mb-3 order-lg-2" id="Collapse4" data-bs-parent="#infoCollaspe">
+											<div class="drop-text">
+													มาร์จินใช้งานแรงดูด โอเวอร์ปัจฉิมนิเทศ แจ็กพ็อตอีสต์บาลานซ์ปฏิสัมพันธ์ ว้อยโทรโข่งรุมบ้าศิลปวัฒนธรรม ไฮบริดเมเปิลอุปสงค์แบดแพนดา บ๋อย ปาสกาลฮาราคีรีน็อคศึกษาศา
+											</div>
 										</div>
 									</div>
 								</div>
+								
 							</div>
 						</div>
 					</div>
@@ -297,31 +347,31 @@
 				<div class="showdesktop">
 					<div class="container">
 						<div align="center" class="row justify-content-center"></div>
-						<h2 class="header2 pt-5">สรุปเนื้อหาในร่างรื้อระบอบอำนาจนิยม</h2>
+						<h2 class="header1 invert pt-5 pb-4">สรุปเนื้อหาในร่างรื้อระบอบอำนาจนิยม</h2>
 						<div align="center" class="row justify-content-center">
 							<div class="col-lg-3 col-md-6 col-sm-6 d-flex flex-column align-items-center">
 								<div class="card mb-4" style="width: 15rem;max-width: 90%; border-radius: 30px; background-color: white; height: 15rem;"></div>
-								<Button class="btn btn-custom-dropdown mb-5" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+								<Button  class="btn btn-custom-dropdown dropped mb-5" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
 									<i class="bx bx-chevron-down"></i>
 									หลักประกันสิทธิ
 								</Button>
 							</div>
 							<div class="col-lg-3 col-md-6 col-sm-6 d-flex flex-column align-items-center">
 								<div class="card mb-4" style="width: 15rem;max-width: 90%; border-radius: 30px; background-color: white; height: 15rem;"></div>
-								<Button class="btn btn btn-custom-dropdown mb-5" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
+								<Button  class="btn btn-custom-dropdown mb-5" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
 									<i class="bx bx-chevron-down"></i>
 									คุ้มครองจิตใจ</Button>
 							</div>
 							<div class="col-lg-3 col-md-6 col-sm-6 d-flex flex-column align-items-center">
 								<div class="card mb-4" style="width: 15rem;max-width: 90%; border-radius: 30px; background-color: white; height: 15rem;"></div>
-								<Button class="btn btn-custom-dropdown mb-5" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+								<Button  class="btn btn-custom-dropdown mb-5" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
 									<i class="bx bx-chevron-down"></i>
 									หลักประกันสิทธิ
 								</Button>
 							</div>
 							<div class="col-lg-3 col-md-6 col-sm-6 d-flex flex-column align-items-center">
 								<div class="card mb-4" style="width: 15rem;max-width: 90%; border-radius: 30px; background-color: white; height: 15rem;"></div>
-								<Button class="btn btn btn-custom-dropdown mb-5" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
+								<Button  class="btn btn-custom-dropdown mb-5" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
 									<i class="bx bx-chevron-down"></i>
 									คุ้มครองจิตใจ</Button>
 							</div>
@@ -349,27 +399,27 @@
 						<div align="center" class="row justify-content-center">
 							<div class="col-lg-3 col-md-6 col-sm-6 d-flex flex-column align-items-center">
 								<div class="card mb-4" style="width: 15rem;max-width: 90%; border-radius: 30px; background-color: white; height: 15rem;"></div>
-								<Button class="btn btn-custom-dropdown mb-5" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+								<Button  class="btn btn-custom-dropdown mb-5" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
 									<i class="bx bx-chevron-down"></i>
 									หลักประกันสิทธิ
 								</Button>
 							</div>
 							<div class="col-lg-3 col-md-6 col-sm-6 d-flex flex-column align-items-center">
 								<div class="card mb-4" style="width: 15rem;max-width: 90%; border-radius: 30px; background-color: white; height: 15rem;"></div>
-								<Button class="btn btn btn-custom-dropdown mb-5" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
+								<Button  class="btn btn-custom-dropdown mb-5" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
 									<i class="bx bx-chevron-down"></i>
 									คุ้มครองจิตใจ</Button>
 							</div>
 							<div class="col-lg-3 col-md-6 col-sm-6 d-flex flex-column align-items-center">
 								<div class="card mb-4" style="width: 15rem;max-width: 90%; border-radius: 30px; background-color: white; height: 15rem;"></div>
-								<Button class="btn btn-custom-dropdown mb-5" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+								<Button  class="btn btn-custom-dropdown mb-5" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
 									<i class="bx bx-chevron-down"></i>
 									หลักประกันสิทธิ
 								</Button>
 							</div>
 							<div class="col-lg-3 col-md-6 col-sm-6 d-flex flex-column align-items-center">
 								<div class="card mb-4" style="width: 15rem;max-width: 90%; border-radius: 30px; background-color: white; height: 15rem;"></div>
-								<Button class="btn btn btn-custom-dropdown mb-5" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
+								<Button  class="btn btn-custom-dropdown mb-5" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
 									<i class="bx bx-chevron-down"></i>
 									คุ้มครองจิตใจ</Button>
 							</div>
@@ -397,27 +447,27 @@
 						<div align="center" class="row justify-content-center">
 							<div class="col-lg-3 col-md-6 col-sm-6 d-flex flex-column align-items-center">
 								<div class="card mb-4" style="width: 15rem;max-width: 90%; border-radius: 30px; background-color: white; height: 15rem;"></div>
-								<Button class="btn btn-custom-dropdown mb-5" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+								<Button  class="btn btn-custom-dropdown mb-5" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
 									<i class="bx bx-chevron-down"></i>
 									หลักประกันสิทธิ
 								</Button>
 							</div>
 							<div class="col-lg-3 col-md-6 col-sm-6 d-flex flex-column align-items-center">
 								<div class="card mb-4" style="width: 15rem;max-width: 90%; border-radius: 30px; background-color: white; height: 15rem;"></div>
-								<Button class="btn btn btn-custom-dropdown mb-5" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
+								<Button  class="btn btn btn-custom-dropdown mb-5" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
 									<i class="bx bx-chevron-down"></i>
 									คุ้มครองจิตใจ</Button>
 							</div>
 							<div class="col-lg-3 col-md-6 col-sm-6 d-flex flex-column align-items-center">
 								<div class="card mb-4" style="width: 15rem;max-width: 90%; border-radius: 30px; background-color: white; height: 15rem;"></div>
-								<Button class="btn btn-custom-dropdown mb-5" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+								<Button  class="btn btn-custom-dropdown mb-5" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
 									<i class="bx bx-chevron-down"></i>
 									หลักประกันสิทธิ
 								</Button>
 							</div>
 							<div class="col-lg-3 col-md-6 col-sm-6 d-flex flex-column align-items-center">
 								<div class="card mb-4" style="width: 15rem;max-width: 90%; border-radius: 30px; background-color: white; height: 15rem;"></div>
-								<Button class="btn btn btn-custom-dropdown mb-5" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
+								<Button  class="btn btn btn-custom-dropdown mb-5" onclick="ct_dropdown(this)" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
 									<i class="bx bx-chevron-down"></i>
 									คุ้มครองจิตใจ</Button>
 							</div>

@@ -27,3 +27,27 @@ function request(action, data, callback) {
         callback($xhr.status, $xhr.responseJSON);
     });
 }
+
+let DroplatestButton = null;
+
+function ct_dropdown(button) {
+  if (button.classList.contains("dropped")) {
+    button.classList.remove("dropped");
+    DroplatestButton = null;
+  } else {
+    if (DroplatestButton !== null) {
+      DroplatestButton.classList.remove("dropped");
+    }
+    button.classList.add("dropped");
+    DroplatestButton = button;
+  }
+}
+
+var latestCSText = document.getElementById("cs-text-nav1");
+
+function toggle_csnav_text(textID) {
+    var text = document.getElementById(textID);
+    latestCSText.style.display = "none";
+    text.style.display = "inline-block";
+    latestCSText = text;
+}
