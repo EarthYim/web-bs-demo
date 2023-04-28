@@ -33,7 +33,7 @@ body {
 
 .textp1 {
     font-family: FCMinimalRegular;
-    font-size: 18px;
+    font-size: 16px;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -55,13 +55,23 @@ body {
 .header1 {
     font-family: KulachatSlabBold;
     color: rgb(237,102,129);
-    font-size: 34px;
+    font-size: 28px;
     padding-left: 30px;
     padding-right: 30px;
 }
 
 .header1.invert {
     color: white;
+}
+
+.header1.box {
+    background-color: rgb(254,186,43);
+    color: black;
+    border-radius: 20px;
+    font-size: 16px;
+    width: 15rem;
+    text-align: center;
+    margin-left: 30px;
 }
 
 .badstudentHeaderV4 {
@@ -239,6 +249,9 @@ a:active {
   cursor: not-allowed;
   background: rgba(0, 0, 0, .08);
   color: rgba(0, 0, 0, .3);
+}   
+
+.card {
 }
 
 .infoCard {
@@ -252,34 +265,33 @@ a:active {
     background-color: #fff;
     word-wrap: break-word;
     margin-bottom: 20px;
-    padding: 19px;
-    height: 340px;
-    width: 36rem;
-    max-width: 90%;
+    padding: 1px;
+    height: 260px;
+    width: 31rem;
     min-width: 0;
 }
 
 .card-custom::before {
     position: absolute;
     content: "";
-    width: 82%;
-    height: 68%;
+    width: 90%;
+    height: 75%;
     background-color: #F6829B;
     display: block;
     border-radius: 30px;
-    margin-top: 64px;
+    margin-top: 63px;
 }
 
 .card-custom-sub::before {
     position: absolute;
     content: "";
-    width: 82%;
+    width: 90%;
     height: 13%;
     background-color: #EE6581;
     display: block;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    margin-top: 258px;
+    margin-top: 225px;
 }
 
 
@@ -301,7 +313,7 @@ a:active {
 .card-custom-content {
     align-items: center;
     margin-left: 40px;
-    margin-top: 135px;
+    margin-top: 110px;
 }
 
 .card-custom-title {
@@ -339,13 +351,13 @@ a:active {
 .btn-custom-dropdown {
     color: white;
     font-family: FCMinimalRegular;
-    font-size: 18px;
+    font-size: 16px;
     transition: 0.3s;
 }
 
 .drop-text {
     font-family: FCMinimalRegular;
-    font-size: 18px;
+    font-size: 16px;
     color: white;
 }
 
@@ -417,18 +429,18 @@ a:active {
 @media only screen and (max-width: 600px) {
 
     .card-custom {
-        height: 210px;
-        max-width: 380px;
+        height: 170px;
+        max-width: 310px;
     }
     .card-custom::before {
         border-radius: 20px;
-        margin-top: 29px;
+        margin-top: 41px;
     }
     
     .card-custom-sub::before {
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
-        margin-top: 144px;
+        margin-top: 146px;
     }
 
     .card-custom-content {
@@ -445,18 +457,6 @@ a:active {
     .card-custom-text {
         font-size: 12px;
         margin-bottom: 10px;
-    }
-
-    .btn-custom-dropdown {
-        font-size: 15px;
-    }
-    
-    .drop-text {
-        font-size: 15px;
-    }
-
-    .header1 {
-        font-size: 28px;
     }
 
     .button-18 {
